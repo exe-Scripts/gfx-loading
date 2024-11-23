@@ -1,0 +1,912 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  gap: 4vh;
+  background-color: black;
+}
+
+@font-face {
+  font-family: Opinion Pro Cn;
+  src: url(assets/fonts/Opinion_Pro_Condensed_W05_Bold.ttf);
+}
+@font-face {
+  font-family: Satoshi;
+  src: url(assets/fonts/Satoshi-Medium.otf);
+}
+audio {
+  display: none;
+  background-color: transparent;
+  z-index: -1;
+}
+
+.loading-first-contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 50%;
+  height: 90%;
+}
+.loading-first-contain .loading-updates-contain {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  border: 1.982px solid #4D4C4E;
+  background: radial-gradient(70.12% 70.12% at 50% 50%, rgba(43, 43, 43, 0) 0%, rgba(11, 10, 14, 0.1) 100%);
+  box-sizing: border-box;
+}
+.loading-first-contain .loading-updates-contain .update-notes {
+  position: relative;
+  width: 93%;
+  height: 78%;
+  margin: 3vh auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.loading-first-contain .loading-updates-contain .update-notes::-webkit-scrollbar {
+  display: none;
+}
+.loading-first-contain .loading-updates-contain .update-notes .update {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  margin-top: 1.5vh;
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 5vh;
+  background: rgba(255, 255, 255, 0.03);
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .header h1 {
+  display: flex;
+  align-items: center;
+  padding-left: 1vh;
+  position: relative;
+  width: 72%;
+  height: 67%;
+  color: #D0D0D0;
+  font-family: Opinion Pro Cn;
+  font-size: 15.25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: 0.844px solid #515151;
+  background: rgba(217, 217, 217, 0.07);
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .header p {
+  position: relative;
+  width: 22%;
+  height: 67%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #D99AD0;
+  font-family: Opinion Pro Cn;
+  font-size: 16.636px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: 0.844px solid #D99AD0;
+  background: linear-gradient(94deg, rgba(217, 154, 208, 0.1) 12.22%, rgba(217, 154, 208, 0) 53.19%);
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12.5vh;
+  position: relative;
+  width: 100%;
+  height: 14vh;
+  background: rgba(255, 255, 255, 0.03);
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .content .infos {
+  position: relative;
+  width: 60%;
+  height: 85%;
+  margin-left: 1vh;
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .content .infos .title {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 20vh;
+  height: 4vh;
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .content .infos .title img {
+  position: relative;
+  width: 4vh;
+  height: 4vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .content .infos h1 {
+  color: #FFF;
+  font-family: Opinion Pro Cn;
+  font-size: 12.049px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .content .infos h1 strong {
+  color: #FFD978 !important;
+  font-family: Opinion Pro Cn;
+  font-size: 12.049px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .content .images {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 85%;
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .content .images img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .content .title-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  margin-left: 1vh;
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .content .title-texts h1 {
+  color: #939393;
+  font-family: Opinion Pro Cn;
+  font-size: 1vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.loading-first-contain .loading-updates-contain .update-notes .update .content .title-texts p {
+  color: #FFF;
+  font-family: Opinion Pro Cn;
+  font-size: 1.6vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.loading-first-contain .loading-updates-contain .keys-contain {
+  display: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  row-gap: 2vh;
+  -moz-column-gap: 5vh;
+       column-gap: 5vh;
+  flex-wrap: wrap;
+  position: relative;
+  width: 93%;
+  height: 78%;
+  margin: 3vh auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.loading-first-contain .loading-updates-contain .keys-contain .keys {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 46%;
+  height: 9vh;
+  border: 1px solid #353535;
+  background: rgba(255, 255, 255, 0.03);
+  transition: 300ms all;
+}
+.loading-first-contain .loading-updates-contain .keys-contain .keys .key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 1.633px;
+  border: 0.544px solid #3F3F3F;
+  background: rgba(217, 217, 217, 0.05);
+  box-shadow: -3.33931px 3.33931px 3.33931px 0px rgba(255, 255, 255, 0.05) inset, 3.33931px -3.33931px 3.33931px 0px rgba(165, 165, 165, 0.05) inset;
+  -webkit-backdrop-filter: blur(0.7346474528px);
+          backdrop-filter: blur(0.7346474528px);
+  margin-left: 1.5vh;
+}
+.loading-first-contain .loading-updates-contain .keys-contain .keys .key p {
+  color: #909090;
+  text-align: center;
+  font-family: Opinion Pro Cn;
+  font-size: 28.05px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.loading-first-contain .loading-updates-contain .keys-contain .keys .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 35vh;
+  height: 70%;
+  margin-left: 1.5vh;
+}
+.loading-first-contain .loading-updates-contain .keys-contain .keys .text h1 {
+  color: #4F4F4F;
+  font-family: Opinion Pro Cn;
+  font-size: 13.251px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.loading-first-contain .loading-updates-contain .keys-contain .keys .text p {
+  color: #909090;
+  font-family: Opinion Pro Cn;
+  font-size: 23.112px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.loading-first-contain .loading-updates-contain .keys-contain .keys:hover {
+  border: 1px solid #9B78FF;
+  background: rgba(255, 255, 255, 0.03);
+}
+.loading-first-contain .loading-updates-contain .keys-contain .keys:hover .key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 1.633px;
+  border: 0.544px solid #9B78FF !important;
+  background: rgba(217, 154, 208, 0.04) !important;
+  box-shadow: -3.33931px 3.33931px 3.33931px 0px rgba(255, 255, 255, 0.05) inset, 3.33931px -3.33931px 3.33931px 0px rgba(165, 165, 165, 0.05) inset !important;
+  -webkit-backdrop-filter: blur(0.7346474528px) !important;
+          backdrop-filter: blur(0.7346474528px) !important;
+}
+.loading-first-contain .loading-updates-contain .keys-contain .keys:hover .key p {
+  color: #D99AD0 !important;
+  font-family: Opinion Pro Cn;
+  font-size: 28.05px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.loading-first-contain .loading-updates-contain .keys-contain .keys:hover .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 35vh;
+  height: 70%;
+  margin-left: 1.5vh;
+}
+.loading-first-contain .loading-updates-contain .keys-contain .keys:hover .text h1 {
+  color: #4F4F4F;
+  font-family: Opinion Pro Cn;
+  font-size: 13.251px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.loading-first-contain .loading-updates-contain .keys-contain .keys:hover .text p {
+  background: linear-gradient(90deg, #D99AD0 7.45%, #FFD978 96.17%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-family: Opinion Pro Cn;
+  font-size: 23.112px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.loading-first-contain .loading-updates-contain .keys-contain::-webkit-scrollbar {
+  width: 1.5vh;
+  background: rgba(217, 217, 217, 0.04) !important;
+  box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.32) inset, 0px 0px 132px 0px rgba(205, 205, 205, 0.12) !important;
+}
+.loading-first-contain .loading-updates-contain .keys-contain::-webkit-scrollbar-track {
+  background: rgba(217, 217, 217, 0.04) !important;
+  box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.32) inset, 0px 0px 132px 0px rgba(205, 205, 205, 0.12) !important;
+}
+.loading-first-contain .loading-updates-contain .keys-contain::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #C478FF 0%, #FFD978 173.53%);
+  box-shadow: 0px 0px 250px 0px #D0ACB8;
+}
+.loading-first-contain .loading-updates-contain .social-contain {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 93%;
+  height: 78%;
+  margin: 3vh auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.loading-first-contain .loading-updates-contain .social-contain h1 {
+  font-family: Opinion Pro Cn;
+  font-size: 66.645px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(91deg, #D99AD0 7.94%, #FFD978 102.39%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 1vh 0vh 0vh 0vh;
+}
+.loading-first-contain .loading-updates-contain .social-contain p {
+  color: #868686;
+  font-family: Opinion Pro Cn;
+  font-size: 22.622px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 4.638px;
+  margin: 0;
+}
+.loading-first-contain .loading-updates-contain .social-contain::-webkit-scrollbar {
+  display: none;
+}
+.loading-first-contain .loading-updates-contain .social-contain .socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 60vh;
+  height: 40vh;
+  margin-top: 4vh;
+}
+.loading-first-contain .loading-updates-contain .social-contain .socials button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 8vh;
+  background-color: transparent;
+  border: none;
+}
+.loading-first-contain .loading-updates-contain .social-contain .socials button img {
+  position: relative;
+  width: 4vh;
+}
+.loading-first-contain .loading-updates-contain .social-contain .socials button .link {
+  display: flex;
+  align-items: center;
+  padding-left: 3vh;
+  position: relative;
+  width: 48vh;
+  height: 100%;
+  border-radius: 5.127px;
+  border: 2.051px solid #B2B2B2;
+  background: linear-gradient(266deg, rgba(133, 133, 133, 0.04) 6.46%, rgba(133, 133, 133, 0.04) 87.8%);
+  box-shadow: 0px 0px 39.13385px -2.23622px rgba(237, 187, 162, 0.06);
+}
+.loading-first-contain .loading-updates-contain .social-contain .socials button .link p {
+  font-family: Poppins;
+  font-size: 1.8vh;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.loading-first-contain .loading-updates-contain .updates-nav-button {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 4vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 93%;
+  height: 7vh;
+}
+.loading-first-contain .loading-updates-contain .updates-nav-button .-active {
+  border-radius: 4.242px !important;
+  border: 1.697px solid #D9B4AC !important;
+  background: linear-gradient(0deg, rgba(217, 180, 172, 0.06) 0%, rgba(217, 180, 172, 0.06) 100%) !important;
+}
+.loading-first-contain .loading-updates-contain .updates-nav-button .-active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.5vh;
+  height: 100%;
+  border-radius: 1.815px 0px 0px 1.815px;
+  background: linear-gradient(180deg, #D9B4AC 0%, #F8D283 100%);
+  box-shadow: 0px 0px 42.64721px 0px #D9B4AC;
+}
+.loading-first-contain .loading-updates-contain .updates-nav-button .-active .button-texts h1 {
+  color: #EDC891 !important;
+  font-family: Poppins;
+  font-size: 18.347px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.loading-first-contain .loading-updates-contain .updates-nav-button .-active .button-texts p {
+  color: #A0A0A0 !important;
+  font-family: Poppins;
+  font-size: 10.409px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.loading-first-contain .loading-updates-contain .updates-nav-button .nav-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 32%;
+  height: 100%;
+  border-radius: 4.242px;
+  border: 1.697px solid #242226;
+  background: linear-gradient(266deg, rgba(217, 217, 217, 0.04) 6.46%, rgba(217, 217, 217, 0.01) 87.8%);
+  gap: 1.5vh;
+}
+.loading-first-contain .loading-updates-contain .updates-nav-button .nav-button img {
+  position: relative;
+  width: 3.5vh;
+  margin-left: 2.2vh;
+}
+.loading-first-contain .loading-updates-contain .updates-nav-button .nav-button .button-texts {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  width: 60%;
+  height: 100%;
+}
+.loading-first-contain .loading-updates-contain .updates-nav-button .nav-button .button-texts h1 {
+  color: #878787;
+  font-family: Poppins;
+  font-size: 18.347px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+.loading-first-contain .loading-updates-contain .updates-nav-button .nav-button .button-texts p {
+  color: #A0A0A0;
+  font-family: Poppins;
+  font-size: 10.409px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+.loading-first-contain .loading-load-bar {
+  position: relative;
+  width: 100%;
+  height: 1.8vh;
+  border-radius: 3px;
+  background: rgba(217, 217, 217, 0.04);
+  box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.32) inset, 0px 0px 132px 0px rgba(205, 205, 205, 0.12);
+}
+.loading-first-contain .loading-load-bar .progress {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #9B78FF 0%, #FFD978 98.74%);
+  box-shadow: 0px 0px 250px 0px #D0ACB8;
+}
+
+.loading-second-contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 40%;
+  height: 90%;
+}
+.loading-second-contain .loading-general-infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 27%;
+}
+.loading-second-contain .loading-general-infos .general-infos-server {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  width: 47%;
+  height: 100%;
+  border-radius: 0.898px;
+  border: 0.898px solid #3D3D3D;
+  background: rgba(181, 181, 181, 0);
+}
+.loading-second-contain .loading-general-infos .general-infos-server .server-info-header {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 95%;
+  height: 9vh;
+  margin-top: 1.5vh;
+}
+.loading-second-contain .loading-general-infos .general-infos-server .server-info-header .header-texts {
+  position: relative;
+  height: 100%;
+}
+.loading-second-contain .loading-general-infos .general-infos-server .server-info-header .header-texts h1 {
+  color: #ABABAB;
+  font-family: Opinion Pro Cn;
+  font-size: 2.9vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 1.8vh 0vh 0vh 0vh;
+}
+.loading-second-contain .loading-general-infos .general-infos-server .server-info-header .header-texts p {
+  color: #646464;
+  font-family: Opinion Pro Cn;
+  font-size: 1.7vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.loading-second-contain .loading-general-infos .general-infos-server .server-info-header .server-logo {
+  position: relative;
+  width: 8vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.loading-second-contain .loading-general-infos .general-infos-server .server-info-text {
+  position: relative;
+  width: 90%;
+  height: 45%;
+  color: #7C7C7C;
+  font-family: Satoshi !important;
+  font-size: 1.3vh;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.loading-second-contain .loading-general-infos .general-infos-server .infos-server-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25vh;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 47%;
+  height: 100%;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-player-contain {
+  position: relative;
+  width: 100%;
+  height: 47%;
+  border-radius: 0.898px;
+  border: 0.898px solid #3D3D3D;
+  background: rgba(181, 181, 181, 0);
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-player-contain .infos-player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92%;
+  height: 70%;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-player-contain .infos-player img {
+  position: relative;
+  width: 7vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-player-contain .infos-player .player-texts {
+  position: relative;
+  width: 55%;
+  height: 100%;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-player-contain .infos-player .player-texts h1 {
+  color: #ABABAB;
+  font-family: Opinion Pro Cn;
+  font-size: 2.9vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0.8vh 0vh 0vh 0vh;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-player-contain .infos-player .player-texts p {
+  color: #646464;
+  font-family: Opinion Pro Cn;
+  font-size: 1.8vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-player-contain .infos-player .player-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 10%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-player-contain .infos-player .player-icon img {
+  position: relative;
+  width: 3vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-player-contain .infos-player .player-icon p {
+  color: #D99AD0;
+  font-family: Opinion Pro Cn;
+  font-size: 1.2vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-player-contain .infos-server-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25vh;
+  filter: drop-shadow(0px 0px 14.171298027px #FFD978);
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain {
+  position: relative;
+  width: 100%;
+  height: 47%;
+  border-radius: 0.898px;
+  border: 0.898px solid #3D3D3D;
+  background: rgba(181, 181, 181, 0);
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .music-icon {
+  position: absolute;
+  right: 1.5vh;
+  top: 1.5vh;
+  width: 2vh;
+  height: 2vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92%;
+  height: 75%;
+  /* Track: webkit browsers */
+  /* Track: Mozilla Firefox */
+  /* Thumb: webkit */
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain img {
+  position: relative;
+  width: 19%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain .song-info-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 77%;
+  height: 100%;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain .song-info-buttons h1 {
+  width: 100%;
+  color: #A9A9A9;
+  text-align: left;
+  font-family: Satoshi;
+  font-size: 11.581px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 1vh 0vh 0vh 0vh;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain .song-info-buttons p {
+  width: 100%;
+  color: #757575;
+  text-align: left;
+  font-family: Satoshi;
+  font-size: 11.581px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain .song-info-buttons .song-prog {
+  position: relative;
+  width: 100%;
+  height: 0.25vh;
+  border-radius: 2.813px;
+  background: rgba(217, 217, 217, 0.13);
+  margin-top: 0.8vh;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain .song-info-buttons .song-prog .path {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  background-color: #D99AD0;
+  transition: all 1s;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain .song-info-buttons .button-contain {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1vh;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 3vh;
+  margin-top: 0.5vh;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain .song-info-buttons .button-contain img {
+  position: relative;
+  width: 1.5vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain .volume {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 9vh;
+  height: 2vh;
+  top: 100%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain .volume img {
+  position: relative;
+  width: 1.8vh;
+  height: 1.8vh;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain .volume-input {
+  position: relative;
+  height: 0.3vh;
+  transition: all 0.25s;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain input[type=range] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  /* creating a custom design */
+  width: 75%;
+  cursor: pointer;
+  outline: none;
+  /*  slider progress trick  */
+  overflow: hidden;
+  border-radius: 16px;
+  border: none;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain input[type=range]::-webkit-slider-runnable-track {
+  height: 15px;
+  background: #2d2c2c;
+  border-radius: 16px;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain input[type=range]::-moz-range-track {
+  height: 15px;
+  background: #ccc;
+  border-radius: 16px;
+}
+.loading-second-contain .loading-general-infos .general-infos-playernmusic .infos-music-contain .song-contain input[type=range]::-webkit-slider-thumb {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  height: 15px;
+  width: 15px;
+  background-color: #D99AD0;
+  border-radius: 50%;
+  /*  slider progress trick  */
+  border: none;
+  box-shadow: -407px 0 0 400px #D99AD0;
+}
+.loading-second-contain .loading-player-list {
+  position: relative;
+  width: 100%;
+  height: 69%;
+  border-radius: 0.898px;
+  border: 0.898px solid #3D3D3D;
+  background: rgba(181, 181, 181, 0);
+}
+.loading-second-contain .loading-player-list .list-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96%;
+  height: 95%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.loading-second-contain .loading-player-list .list-player::-webkit-scrollbar {
+  display: none;
+}
+.loading-second-contain .loading-player-list .list-player .player {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 5vh;
+  border: 0.534px solid #535353;
+  background: rgba(217, 217, 217, 0.02);
+  box-sizing: border-box;
+  margin-bottom: 1vh;
+}
+.loading-second-contain .loading-player-list .list-player .player .player-logo {
+  position: relative;
+  width: 3.5vh;
+  margin-left: 0.8vh;
+}
+.loading-second-contain .loading-player-list .list-player .player .player-icon {
+  position: absolute;
+  right: 1.4vh;
+  width: 1.8vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.loading-second-contain .loading-player-list .list-player .player p {
+  color: #888;
+  text-align: center;
+  font-family: Opinion Pro Cn;
+  font-size: 1.4vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 1vh;
+}
+
+.load-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}/*# sourceMappingURL=style.css.map */
